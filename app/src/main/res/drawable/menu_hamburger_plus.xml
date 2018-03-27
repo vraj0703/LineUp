@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vector_hamburger">
+
+    <target
+        android:name="top_container"
+        android:animation="@anim/hamburger2_top_bar" />
+    <target
+        android:name="stem_container"
+        android:animation="@anim/hamburger2_stem_bar" />
+
+    <target
+        android:name="bottom_container"
+        android:animation="@anim/hamburger2_bottom_bar" />
+
+    <target
+        android:name="menu_container"
+        android:animation="@anim/anim_rotation_half_clock" />
+
+</animated-vector>

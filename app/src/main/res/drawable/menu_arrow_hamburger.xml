@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:drawable="@drawable/vector_arrow">
+
+    <target
+        android:name="top_container"
+        android:animation="@anim/arrow_top_bar" />
+    <target
+        android:name="stem_container"
+        android:animation="@anim/arrow_stem_bar" />
+
+    <target
+        android:name="bottom_container"
+        android:animation="@anim/arrow_bottom_bar" />
+
+    <target
+        android:name="menu_container"
+        android:animation="@anim/anim_rotation_half_clock" />
+
+    <target
+        android:name="top"
+        android:animation="@anim/anim_color_change_accent_primary" />
+
+    <target
+        android:name="stem"
+        android:animation="@anim/anim_color_change_accent_primary" />
+
+    <target
+        android:name="bottom"
+        android:animation="@anim/anim_color_change_accent_primary" />
+
+</animated-vector>

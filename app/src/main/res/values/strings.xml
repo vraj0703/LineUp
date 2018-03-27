@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">LineUp</string>
+    <string name="how_to_use">How to use</string>
+    <string name="share">Share</string>
+    <string name="feedback_reviews">Feedbacks and Reviews</string>
+    <string name="buy_me_beer">Buy me a beer</string>
+    <string name="credits">Credits</string>
+    <string name="settings">Settings</string>
+</resources>
