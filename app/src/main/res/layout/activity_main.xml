@@ -18,6 +18,7 @@
             android:layout_marginStart="@dimen/margin_xlarge"
             android:layout_marginTop="@dimen/margin_xlarge"
             android:elevation="@dimen/elevation_medium"
+            android:onClick="navButtonClicked"
             android:translationZ="2dp"
             android:visibility="gone"
             app:layout_constraintStart_toStartOf="parent"

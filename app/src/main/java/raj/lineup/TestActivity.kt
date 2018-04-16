@@ -26,7 +26,7 @@ class TestActivity : AppCompatActivity(), TestCallback {
 
     private fun setUpRecyclerView() {
         if (binding.list.adapter == null) {
-            binding.list.adapter = TestRecyclerAdapter(ArrayList())
+            //binding.list.adapter = TestRecyclerAdapter(ArrayList())
         }
         if (binding.list.layoutManager == null) {
             binding.list.layoutManager = LinearLayoutManager(this)
@@ -36,7 +36,7 @@ class TestActivity : AppCompatActivity(), TestCallback {
     override fun onCallback(text: String?) {
         val adapter = binding.list.adapter as TestRecyclerAdapter
         if (text != null) {
-            adapter.update(text)
+            //adapter.update(text)
         }
     }
 }

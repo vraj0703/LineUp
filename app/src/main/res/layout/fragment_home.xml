@@ -9,7 +9,7 @@
 
         <raj.first.view.FontTextView
             android:id="@+id/title"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginEnd="@dimen/margin_normal"
             android:layout_marginStart="@dimen/margin_normal"
@@ -21,49 +21,66 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
 
-        <LinearLayout
-            android:id="@+id/wrapper"
-            android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_marginEnd="16dp"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="20dp"
-            android:orientation="horizontal"
-            app:layout_constraintEnd_toEndOf="parent"
+        <raj.first.view.FontEditText
+            android:id="@+id/head"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="4"
+            android:backgroundTint="@android:color/transparent"
+            android:hint="Make Lineup"
+            android:padding="@dimen/margin_medium"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:textSize="@dimen/text_xxlarge"
+            app:layout_constraintEnd_toStartOf="@+id/time"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/title">
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
-            <raj.first.view.FontEditText
-                android:id="@+id/head"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="4"
-                android:backgroundTint="@android:color/transparent"
-                android:hint="Make Lineup"
-                android:padding="@dimen/margin_medium"
-                android:textCursorDrawable="@drawable/cursor_drawable"
-                android:textSize="@dimen/text_xxlarge" />
+        <ImageView
+            android:id="@+id/next"
+            android:layout_width="50dp"
+            android:layout_height="0dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="32dp"
+            android:layout_weight="1"
+            android:background="@color/colorAccent"
+            app:layout_constraintBottom_toBottomOf="@+id/head"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
-            <ImageView
-                android:id="@+id/next"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1"
-                android:background="@color/colorAccent" />
-        </LinearLayout>
+        <raj.first.view.FontTimeTextView
+            android:id="@+id/time"
+            android:layout_width="90dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:layout_marginEnd="8dp"
+            android:layout_marginTop="32dp"
+            android:backgroundTint="@android:color/transparent"
+            android:gravity="center"
+            android:textCursorDrawable="@drawable/cursor_drawable"
+            android:textSize="@dimen/text_xxlarge"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/list"
+            app:layout_constraintEnd_toStartOf="@+id/next"
+            app:layout_constraintTop_toBottomOf="@+id/title" />
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/list"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_gravity="bottom"
             android:layout_marginBottom="@dimen/margin_normal"
             android:layout_marginEnd="@dimen/margin_normal"
             android:layout_marginStart="@dimen/margin_normal"
-            android:layout_marginTop="8dp"
+            android:layout_marginTop="16dp"
+            android:layoutAnimation="@anim/layout_animation_fall_down"
+            app:layout_anchor="@+id/head"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/wrapper" />
+            app:layout_constraintTop_toBottomOf="@+id/head" />
 
     </android.support.constraint.ConstraintLayout>
 </layout>

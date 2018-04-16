@@ -40,7 +40,7 @@ class AnimationUtils {
                     (viewB as TextView).text = (viewA as TextView).text.toString()
                 }
             })
-            viewA.startAnimation(a)
+            viewB.startAnimation(a)
         }
     }
 }
